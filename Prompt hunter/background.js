@@ -138,7 +138,9 @@ chrome.tabs.onUpdated.addListener(async (tabId, changeInfo, tab) => {
   if (
     changeInfo.url &&
     (changeInfo.url.includes("https://www.midjourney.com/app/jobs/") ||
-      changeInfo.url.includes("https://www.midjourney.com/app/feed/"))
+      changeInfo.url.includes("https://www.midjourney.com/app/feed/") || changeInfo.url.includes("https://www.nijijourney.com/zh/app/jobs/") ||
+      changeInfo.url.includes("https://www.midjourney.com/zh/app/feed/") || changeInfo.url.includes("https://www.nijijourney.com/en/app/jobs/") ||
+      changeInfo.url.includes("https://www.midjourney.com/en/app/feed/"))
   ) {
     try {
       await chrome.scripting.executeScript({
